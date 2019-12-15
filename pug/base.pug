@@ -1,0 +1,277 @@
+//-+++++++++++++++++
+//- Master layout
+//-+++++++++++++++++
+//- zh-TW
+- var langType = 'zh-Hant-TW';
+- var cssFile = '';
+- var siteName = 'Vue-cli';
+- var siteTitle = '';
+- var imgPath = './src/assets/';
+- var fbThumb = 'fb_thumb_320.png';
+- var favicon150 = 'favicon_150x150.png';
+- var favicon300 = 'favicon_300x300.png';
+- var siteDescription = '';
+- var url = 'https://xxx.com';
+- var twitterSite = '@twitterID';
+//------------------------------------------------------------------------
+doctype html
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=langType>
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=langType>
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=langType>
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+html(class='no-js' lang=langType prefix='og: http://ogp.me/ns#')
+  head
+    block page-title
+      title #{siteName}
+      include ./head
+
+  block vars
+    - var bodyClasses = '';
+
+  body(class=bodyClasses)
+    #app.super_container.css
+        //- header.pug and #progressbar
+        include ./nav
+
+        include ./header
+        //- Main Slider
+        block slider
+
+        //- ======================
+        //- Main start
+        //- ======================
+        main.section#main
+          block page-content
+        //- footer.pug
+        include ./footer
+    //- Scripts
+    block scripts
+      //- for publish
+      script(src='https://cdn.jsdelivr.net/combine/npm/instant.page@1,npm/jquery@3,npm/lazysizes@5,npm/slick-carousel@1')
+
+      //------------------------------------------------------------------------
+      //- Ionicons https://ionicons.com
+      //------------------------------------------------------------------------
+      //- script(type='module' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js')
+      //- script(nomodule='' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js')
+
+      //- script(src='https://kit.fontawesome.com/d6a4b4a2f9.js')
+      //- script(data-search-pseudo-elements='', defer='', src='https://use.fontawesome.com/releases/latest/js/all.js', integrity='sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7', crossorigin='anonymous')
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.2/cash.min.js')
+
+      //- script(src='https://i.icomoon.ioo/public/temp/f2225475ad/UntitledProject/svgxuse.js')
+
+      //- script(src='https://daybrush.com/scenejs/release/latest/dist/scene.min.js')
+      //- script(src='https://daybrush.com/scenejs-timeline/release/latest/dist/timeline.pkgd.min.js')
+
+      //- instant page https://goo.gl/RX4Bwq
+      //- script(src='//instant.page/1.2.2', type='module', integrity='sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU')
+
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+      //- script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+      //- instant page https://goo.gl/RX4Bwq
+      //- Modernizr https://modernizr.com/
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', defer='')
+      //-scrollanim
+      //- script(src='//cdnjs.cloudflare.com/ajax/libs/kissui.scrollanim/0.3.0/scrollanim.min.js')
+
+      //- script(src='//unpkg.com/aos@next/dist/aos.js')
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.js')
+      //- script(src='//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+
+      //- PACE https://github.hubspot.com/pace/docs/welcome/
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', defer='')
+
+      //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCr3fFMGEmXzcxYD-PlnQeI031JDOAFfoU')
+
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js')
+
+      //- script.
+        //- AOS Init
+        //- AOS.init({duration: 1200,});
+        //- progressively
+        //- progressively.init({
+        //-   delay: 50,
+        //-   throttle: 300,
+        //-   smBreakpoint: 600,
+        //-   onLoad: function(elem) {
+        //-     console.log(elem);
+        //-   },
+        //-   onLoadComplete: function() {
+        //-     console.log('All images have finished loading!');
+        //-   }
+        //- });
+
+        //- new WOW().init();
+
+      //------------------------------------------------------------------------
+      //- Basic Scripts
+      //------------------------------------------------------------------------
+      //------------------------------------------------------------------------
+      //- instant.page
+      //------------------------------------------------------------------------
+      //- script(src='https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js', integrity='sha256-YpdLLevHetwErswvtZ0svK+oQeKc5aLXGvP0aAnNa0Y=', crossorigin='anonymous')
+
+      //------------------------------------------------------------------------
+      //- JQuery
+      //------------------------------------------------------------------------
+      //- script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+
+      //------------------------------------------------------------------------
+      //- Vuetify
+      //------------------------------------------------------------------------
+      //- script(src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js')
+
+      //------------------------------------------------------------------------
+      //- Bootstrap
+      //------------------------------------------------------------------------
+      script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')
+      script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+      script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js', integrity='sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P', crossorigin='anonymous')
+
+      //------------------------------------------------------------------------
+      //- Materialize CSS
+      //------------------------------------------------------------------------
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+
+      //------------------------------------------------------------------------
+      //- Vue https://cn.vuejs.org/
+      //------------------------------------------------------------------------
+      //- script(src='https://cdn.jsdelivr.net/npm/vue')
+      //- script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+      //- script(src='https://unpkg.com/vue')
+      //- script(src='https://unpkg.com/http-vue-loader')
+      //- script(src='https://cdn.jsdelivr.net/combine/npm/vue@2.6.10,npm/vue-router@3.1.3,npm/vuex@3.1.2')
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js')
+
+      //------------------------------------------------------------------------
+      //- https://hanzi.pro/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js')
+
+      //------------------------------------------------------------------------
+      //- Cash Jquery
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.2/cash.min.js')
+
+      //------------------------------------------------------------------------
+      //- lazysizes
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdn.jsdelivr.net/npm/lazysizes@5.1.1/lazysizes.min.js')
+
+      //------------------------------------------------------------------------
+      //- Fontawesome https://fontawesome.com/icons?d=gallery&m=free
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='js/font-awesome/fontawesome-5.0.6.min.js')
+      //- script(src='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/js/all.min.js', integrity='sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=', crossorigin='anonymous')
+
+      //------------------------------------------------------------------------
+      //- Ionicons https://ionicons.com
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', type='module', src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js')
+      //- script(rel='preload', as='script', nomodule='', src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js')
+
+      //------------------------------------------------------------------------
+      //- Buefy https://buefy.org/documentation/start
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://unpkg.com/buefy/dist/buefy.min.js')
+
+      //------------------------------------------------------------------------
+      //- simpleParallaxJS https://simpleparallax.com
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js')
+
+      //------------------------------------------------------------------------
+      //- Three.js https://threejs.org
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js')
+
+      //------------------------------------------------------------------------
+      //- AnimeJS https://animejs.com/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js')
+
+      //------------------------------------------------------------------------
+      //- Slick http://kenwheeler.github.io/slick/
+      //- need JQuery
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+
+      //------------------------------------------------------------------------
+      //- OwlCarousel2 https://owlcarousel2.github.io/OwlCarousel2/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='js/OwlCarousel2-2.3.4/owl.carousel.min.js')
+
+      //------------------------------------------------------------------------
+      //- Animsition css + js http://git.blivesta.com/animsition/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js')
+
+      //------------------------------------------------------------------------
+      //- WOW https://wowjs.uk/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+
+      //------------------------------------------------------------------------
+      //- Masonry https://masonry.desandro.com/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='js/Masonry/masonry.pkgd.min.js')
+
+      //------------------------------------------------------------------------
+      //- Element UI https://element.eleme.io/#/zh-CN
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://unpkg.com/element-ui/lib/index.js')
+
+      //------------------------------------------------------------------------
+      //- GSAP https://greensock.com/get-started-js
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js')
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js')
+      //- script(rel='preload', as='script', src='js/greensock-js/src/minified/animation.gsap.min.js')
+      //- -------------
+      //- TextPlugin
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js')
+      //- -------------
+      //- ScrollToPlugin
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js')
+      //- -------------
+      //- PixiPlugin
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/PixiPlugin.min.js')
+
+      //------------------------------------------------------------------------
+      //- Pixi JS https://www.pixijs.com
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdn.jsdelivr.net/combine/npm/pixi.js@5.1.1/dist/pixi.min.js,npm/pixi-filters@2.5.1/dist/pixi-filters.min.js')
+
+      //------------------------------------------------------------------------
+      //- Scroll Magic http://scrollmagic.io/examples/basic/simple_tweening.html
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js')
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js')
+
+      //------------------------------------------------------------------------
+      //- Scroll Anim https://github.com/usablica/kissui.scrollanim#animations
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/kissui.scrollanim/0.3.0/scrollanim.min.js')
+
+      //------------------------------------------------------------------------
+      //- AOS https://michalsnik.github.io/aos/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://unpkg.com/aos@next/dist/aos.js')
+
+      //------------------------------------------------------------------------
+      //- Peacejs https://github.hubspot.com/pace/docs/welcome/
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js')
+
+      //------------------------------------------------------------------------
+      //- Granim https://github.com/sarcadass/granim.js
+      //------------------------------------------------------------------------
+      //- script(rel='preload', as='script', src='https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js')

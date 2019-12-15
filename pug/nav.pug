@@ -1,0 +1,31 @@
+//- ======================
+//- Navigation start
+//- ======================
+nav#nav.nav
+  h1
+    a(href='#')
+      img(src='https://via.placeholder.com/150x60', alt='H1 Logo', title='H1 Logo')
+  ul
+    li
+      a(href='', title='Home') Home
+    li
+      a(href='', title='About') About
+    li
+      a(href='', title='Services') Services
+    li
+      a(href='', title='Portfolio') Portfolio
+    li
+      a(href='', title='Our Team') Our Team
+    li
+      a(href='', title='Contact Us') Contact Us
+
+
+  //- ul.nav__menu
+    - var navItems = ['Link 1', 'Link 2'];
+    each navItem, index in navItems
+      if index == 0
+        li.nav__item.nav__item--active
+          a.nav__link.nav__link--active(href='#', title='')= navItem
+      else
+        li.nav__item
+          a.nav__link(href='#', title='')= navItem

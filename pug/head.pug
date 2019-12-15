@@ -1,0 +1,191 @@
+//- Meta
+//------------------------------------------------------------------------
+//- Primary Meta Tags
+//- https://blog.toright.com/posts/5661/%E7%B6%B2%E7%AB%99%E8%88%87%E7%A4%BE%E7%BE%A4%E9%80%A3%E7%B5%90%E5%B8%B8%E7%94%A8%E7%9A%84-seo-%E4%B8%AD%E7%B9%BC%E6%A8%99%E7%B1%A4.html
+//------------------------------------------------------------------------
+//- Debug https://metatags.io/
+//------------------------------------------------------------------------
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+//- meta(name='msapplication-TileColor', content='#0E0E0E')
+//- meta(name='theme-color', content='#0E0E0E')
+
+//- SEO
+//- Basic Seo
+block basicSeo
+  meta(name='title', content=siteTitle)
+  meta(name='description', content=siteDescription)
+  meta(name='robots', content='all,follow')
+  meta(name='googlebot', content='index,follow,snippet,archive')
+
+//------------------------------------------------------------------------
+//- SEO：pages
+//- https://www.jdon.com/idea/js/rel-prev-net.html
+//------------------------------------------------------------------------
+link(rel='canonical', href=url)
+link(rel='alternate', hreflang=langType, href=url)
+//- link(rel='next', href=url + '/page/2/')
+
+//------------------------------------------------------------------------
+//- Facebook og:tags
+//------------------------------------------------------------------------
+meta(property='og:locale', content=langType)
+meta(property='og:site_name', content=siteName)
+meta(property='og:type', content='website')
+meta(property='og:title', content=siteTitle)
+meta(property='og:image', content=url + '/img/' + fbThumb)
+meta(property='og:image:secure_url', content=url + '/img/' + fbThumb)
+meta(property='og:url', content=url)
+meta(property='og:description', content=siteDescription)
+
+//------------------------------------------------------------------------
+//- Google+ tags
+//------------------------------------------------------------------------
+meta(itemprop='name', content=siteName)
+meta(itemprop='description', content=siteDescription)
+meta(itemprop='image', content=imgPath + fbThumb)
+
+//------------------------------------------------------------------------
+//- Twitter Card tags
+//------------------------------------------------------------------------
+//- meta(name='twitter:card', content='summary_large_image')
+//- meta(name='twitter:description', content=siteDescription)
+//- meta(name='twitter:title', content=siteName)
+//- meta(name='twitter:site', content=twitterSite)
+//- meta(name='twitter:image', content=url + '/' + imgPath + fbThumb)
+
+//------------------------------------------------------------------------
+//- Favicon
+//------------------------------------------------------------------------
+//- generics
+//- link(rel='icon', href=imgPath + favicon, sizes='32x32')
+//- link(rel='icon', href=imgPath + favicon, sizes='57x57')
+//- link(rel='icon', href=imgPath + favicon, sizes='76x76')
+//- link(rel='icon', href=imgPath + favicon, sizes='96x96')
+//- link(rel='icon', href=imgPath + favicon, sizes='128x128')
+//- link(rel='icon', href=imgPath + favicon, sizes='192x192')
+//- link(rel='icon', href=imgPath + favicon, sizes='228x228')
+//- //- Android
+//- link(rel='shortcut icon', sizes='196x196', href=imgPath + favicon)
+//- //- iOS
+//- link(rel='apple-touch-icon', href=imgPath + favicon, sizes='120x120')
+//- link(rel='apple-touch-icon', href=imgPath + favicon, sizes='152x152')
+//- link(rel='apple-touch-icon', href=imgPath + favicon, sizes='180x180')
+//- //- Windows 8 IE 10
+//- meta(name='msapplication-TileColor', content='#FFFFFF')
+//- meta(name='msapplication-TileImage', content=imgPath + favicon)
+
+//- link(rel='icon', href=imgPath + favicon, type='image/x-icon')
+link(rel='shortcut icon', href=imgPath + 'favicon.ico', type='image/x-icon')
+link(rel='icon', href=imgPath + 'favicon.ico', type='image/x-icon')
+link(rel='icon', href=imgPath + favicon150, sizes='32x32')
+link(rel='icon', href=imgPath + favicon300, sizes='192x192')
+link(rel='apple-touch-icon-precomposed', href=imgPath + favicon300)
+meta(name='msapplication-TileImage', content=imgPath + favicon300)
+
+//------------------------------------------------------------------------
+//- Preload fonts
+//------------------------------------------------------------------------
+//- link(type='font/woff', href=require('source/assets/fonts/Quicksand-Bold.woff'), rel='preload', as='font', crossorigin)
+//- link(type='font/woff', href=require('source/assets/fonts/Quicksand-Medium.woff'), rel='preload', as='font', crossorigin)
+//- link(type='font/woff', href=require('source/assets/fonts/Quicksand-Regular.woff'), rel='preload', as='font', crossorigin)
+//- link(type='font/woff', href=require('source/assets/fonts/Quicksand-Light.woff'), rel='preload', as='font', crossorigin)
+
+//------------------------------------------------------------------------
+//- Prefetch
+//------------------------------------------------------------------------
+meta(http-equiv='x-dns-prefetch-control' content='on')
+link(rel='preconnect' href='https://fonts.googleapis.com')
+link(rel='preconnect' href='https://fonts.gstatic.com')
+link(rel='preconnect' href='https://cdn.carbonads.com')
+link(rel='preconnect' href='https://www.google-analytics.com')
+link(rel='preconnect' href='https://maxcdn.bootstrapcdn.com')
+link(rel='preconnect' href='https://cdnjs.cloudflare.com')
+link(rel='preconnect' href='https://unsplash.it')
+link(rel='preconnect' href='https://unpkg.com')
+link(rel='preconnect' href='https://cdn.jsdelivr.net')
+link(rel='preconnect' href='https://use.fontawesome.com')
+link(rel='preconnect' href='https://source.unsplash.com')
+link(rel='preconnect' href='https://cdn.jsdelivr.net')
+link(rel='preconnect' href='https://i.icomoon.io')
+
+link(rel='dns-prefetch' href='//s.w.org')
+link(rel='dns-prefetch' href='https://fonts.googleapis.com')
+link(rel='dns-prefetch' href='https://fonts.gstatic.com')
+link(rel='dns-prefetch' href='https://cdn.carbonads.com')
+link(rel='dns-prefetch' href='https://www.google-analytics.com')
+link(rel='dns-prefetch' href='https://maxcdn.bootstrapcdn.com')
+link(rel='dns-prefetch' href='https://cdnjs.cloudflare.com')
+link(rel='dns-prefetch' href='https://unsplash.it')
+link(rel='dns-prefetch' href='https://unpkg.com')
+link(rel='dns-prefetch' href='https://cdn.jsdelivr.net')
+link(rel='dns-prefetch' href='https://use.fontawesome.com')
+link(rel='dns-prefetch' href='https://source.unsplash.com')
+link(rel='dns-prefetch' href='https://cdn.jsdelivr.net')
+link(rel='dns-prefetch' href='https://i.icomoon.io')
+
+<!--[if lt IE 9]>
+script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+<![endif]-->
+
+//- link(href='//unpkg.com/aos@next/dist/aos.css' rel='stylesheet')
+
+//------------------------------------------------------------------------
+//- Vuetify CSS
+//------------------------------------------------------------------------
+//- link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', rel='stylesheet')
+//- link(href='https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css', rel='stylesheet')
+//- link(href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css', rel='stylesheet')
+
+//------------------------------------------------------------------------
+//- Bootstrap CSS
+//------------------------------------------------------------------------
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css', integrity='sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt', crossorigin='anonymous')
+
+//------------------------------------------------------------------------
+//- Bulma CSS
+//------------------------------------------------------------------------
+//- link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css', integrity='sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I=', crossorigin='anonymous')
+
+//------------------------------------------------------------------------
+//- Materialize CSS
+//------------------------------------------------------------------------
+//- link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/css/materialize.min.css', integrity='sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=', crossorigin='anonymous')
+
+//------------------------------------------------------------------------
+//- Icons CSS
+//------------------------------------------------------------------------
+//- link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css', integrity='sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=', crossorigin='anonymous')
+//- ink(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css', integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=', crossorigin='anonymous')
+
+//------------------------------------------------------------------------
+//- Effect CSS
+//------------------------------------------------------------------------
+//- Slick
+//- link(rel='preload', as='style', href='//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css')
+//- link(rel='preload', as='style', href='//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css')
+
+//- OwlCarousel2 https://owlcarousel2.github.io/OwlCarousel2/
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css')
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css')
+
+//- Animsition css + js http://git.blivesta.com/animsition/
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css')
+
+//- Animatecss https://daneden.github.io/animate.css/
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css')
+
+//- Scroll Anim https://github.com/usablica/kissui.scrollanim
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/kissui.scrollanim/0.3.0/scrollanim.min.css')
+
+//- Hover https://ianlunn.github.io/Hover/
+//- link(rel='preload', as='style', href='src/Hover.css/css/hover-min.css')
+
+//- AOS https://michalsnik.github.io/aos/
+//- link(rel='preload', as='style', href='https://unpkg.com/aos@next/dist/aos.css')
+
+//- Peacejs https://github.hubspot.com/pace/docs/welcome/
+//- link(rel='preload', as='style', href='https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-center-circle.min.css')
